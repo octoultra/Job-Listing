@@ -1,0 +1,12 @@
+{
+  "semi": false,
+  "tabWidth": 2,
+  "overrides": [
+      {
+          "files": "*.html",
+          "options": {
+              "tabWidth": 2
+          }
+      }
+  ]
+}
