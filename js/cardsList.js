@@ -6,7 +6,7 @@ export const createCardsList = function (target, data) {
   const container = document.querySelector(target);
   container.innerHTML = '';
 
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data?.length; i++) {
     const skillsRequired = [...data[i].languages, ...data[i].tools];
     const card = createCardElement({
       ...data[i],
@@ -19,6 +19,7 @@ export const createCardsList = function (target, data) {
 };
 
 export const refreshCardsList = (searchArray) => {
+
   if (!searchArray?.length) {
     createCardsList(Enums.Container, window.globalDataStorage);
     return;
