@@ -58,7 +58,7 @@ const createCard = (data) => {
       cardSkillset.innerHTML = vacancySkills[p]
     }
 
-
+    
     main.appendChild(card)
   }
 
@@ -85,7 +85,7 @@ const applySearch = function (e, data) {
     searchContainer.innerHTML = null
 
     main.innerHTML = null
-
+    searchArray = []
     searchSet = new Set()
     createCard(data)
   }
@@ -110,6 +110,7 @@ const applySearch = function (e, data) {
       main.innerHTML = null
 
       searchSet = new Set()
+      
       createCard(data)
     }
   }
@@ -135,7 +136,7 @@ getData.then((data) => {
     applySearch(e, data)
     createCard(filderData(data))
 
-
+console.log(searchArray)
   })
 })
 
