@@ -16,6 +16,9 @@ const createCard = (data) => {
     const card = document.createElement("div")
 
     const vacancySkills = [...data[i].languages].concat([...data[i].tools])
+    
+    
+    // const vacancySkills = [...data[i].languages, ...data[i].tools]
 
     card.classList.add("card-container")
     card.innerHTML = `
@@ -42,6 +45,9 @@ const createCard = (data) => {
 `
 
     // creating the right div in the card container, appending it into the card container and adding card-right class to it
+    
+    // Why not just add a div into the template?
+    
     const cardRightDiv = document.createElement("div")
     card.appendChild(cardRightDiv)
     cardRightDiv.classList.add("card-right")
